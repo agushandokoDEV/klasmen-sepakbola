@@ -15,4 +15,9 @@ class Klasmen extends Model
     protected $keyType = 'string';
 
     // protected $fillable=['club_id'];
+
+    public function club()
+    {
+        return $this->belongsTo(Club::class,'club_id');
+    }
 }

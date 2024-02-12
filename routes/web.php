@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\KlubController;
 use App\Http\Controllers\Admin\SkorController;
+use App\Http\Controllers\Admin\KlasmenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,4 +33,8 @@ Route::controller(SkorController::class)->group(function () {
     Route::get('/skor', 'indexPage');
     Route::get('/skor/add', 'addPage');
     Route::post('/skor/add', 'add');
+});
+
+Route::controller(KlasmenController::class)->group(function () {
+    Route::get('/klasmen', 'indexPage');
 });
